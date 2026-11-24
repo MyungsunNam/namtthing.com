@@ -17,11 +17,14 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Heebo:wght@400;600",
-      "primary_type": "sans-serif",
-      "secondary": "Signika:wght@500;700",
-      "secondary_type": "sans-serif"
+      "primary": "\"Helvetica Neue\"",
+      "primary_type": "Helvetica, Arial, sans-serif",
+      "secondary": "\"Helvetica Neue\"",
+      "secondary_type": "Helvetica, Arial, sans-serif"
     },
-    "font_size": { "base": "16", "scale": "1.2" }
+    "font_size": {
+      "base": "16",
+      "scale": "1.2"
+    }
   }
 }

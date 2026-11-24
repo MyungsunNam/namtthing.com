@@ -16,8 +16,8 @@
   --color-text-light: #717171;
 
   /* === Font Families === */
-  --font-primary: Heebo, sans-serif;
-  --font-secondary: Signika, sans-serif;
+  --font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-secondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* === Font Sizes === */
   --text-base: 16px;
