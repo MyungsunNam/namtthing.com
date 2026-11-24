@@ -1,0 +1,15 @@
+/* Add your own custom styles here */
+
+/* 배경을 전부 흰색으로: 섹션 교차 회색 그라디언트 / 페이지 헤더 그라디언트 / 푸터 회색 제거 */
+body,
+.bg-gradient,
+footer {
+  background: #fff !important;
+}
+.from-body.to-light {
+  background-image: none !important;
+  background-color: #fff !important;
+}
+footer {
+  border-top: 1px solid var(--color-border, #eaeaea);
+}
