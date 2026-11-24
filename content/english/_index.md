@@ -1,57 +1,27 @@
 ---
-# Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Hugo Project"
-  content: "Hugoplate is a free starter template built with Hugo and TailwindCSS, providing everything you need to jump-start your Hugo project and save valuable time."
-  image: "/images/banner.png"
-  image_alt: "Illustration of a person working on a laptop at a desk"
-  button:
-    enable: true
-    label: "Fork Deploy and Edit Online 🚀"
-    link: "https://app.sitepins.com/new/clone?name=Hugoplate&repository=https://github.com/zeon-studio/hugoplate?aff=hugoplate"
+  title: "Myungsun Nam"
+  subtitle: "Neuroscientist"
+  content: "Graduate student in the **Neurocircuit Lab**, Department of Chemistry, Seoul National University. I study how **arousal** and **emotion** interact to shape motivated behavior — and why some brains are more susceptible to chronic stress than others."
+  buttons:
+    - label: "About me"
+      link: "/about/"
+    - label: "Read the blog"
+      link: "/blog/"
 
-# Features
-features:
-  - title: "What's Included in Hugoplate"
-    image: "/images/service-1.png"
-    image_alt: "Illustration of interface cards: a video player, bar charts, sliders and a loading spinner"
-    content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
-    bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Hugo and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
-    button:
-      enable: false
-      label: "Get Started Now"
-      link: "#"
-
-  - title: "Discover the Key Features Of Hugo"
-    image: "/images/service-2.png"
-    image_alt: "Illustration of chart cards: bar charts, a donut chart and a line graph"
-    content: "Hugo is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
-    bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
-    button:
-      enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/hugoplate"
-
-  - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
-    image: "/images/service-3.png"
-    image_alt: "Illustration of dashboard widgets: a line graph, sliders, a progress list and a donut chart"
-    content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
-    bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Hugo a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
-    button:
-      enable: false
-      label: ""
-      link: ""
+interests:
+  title: "Research Interests"
+  items:
+    - icon: "🐭"
+      title: "Emotion and Feeling"
+      content: "How internal states are represented in neural circuits and turned into feelings and actions."
+    - icon: "😲"
+      title: "Arousal & Valence"
+      content: "The interplay between arousal level and emotional valence, and how it calibrates behavior."
+    - icon: "🫥"
+      title: "Stress Susceptibility"
+      content: "Individual variability in stress responses — genetic and environmental factors at the circuit level."
+    - icon: "🤡"
+      title: "Hedonic Craving"
+      content: "Want but not like: how chronic high-arousal states drive cravings such as caffeine consumption."
 ---
