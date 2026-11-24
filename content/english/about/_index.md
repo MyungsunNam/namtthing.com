@@ -6,7 +6,7 @@ layout: "about"
 draft: false
 ---
 
-I'm a graduate student in the **Neurocircuit Lab** (Department of Chemistry, Seoul National University) in Seoul, Korea. I received my B.S. in Biological Sciences from Seoul National University.
+I was a graduate student in the **Neurocircuit Lab** (Department of Chemistry, Seoul National University) in Seoul, Korea. I received my B.S. in Biological Sciences from Seoul National University.
 
 I consider one of the significant problems in our society today to be **chronic stress & caffeine consumption**, which induces a chronic **high arousal state**. I am interested in the interplay of **arousal** and **emotion**, and how it calibrates motivated behavior toward **hedonic cravings**. I aim to explore individual variability to find **high-stress susceptible mechanisms** on the **neural circuit level**, considering genetic and environmental factors contributing to individual stress susceptibility. My final goal is to elucidate each individual's unique **emotion regulation circuit** and develop **emotion regulation therapy** for those with high-stress susceptibility.
 
