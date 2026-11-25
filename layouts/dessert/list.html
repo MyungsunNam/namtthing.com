@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <section class="section-sm pt-16">
+    <div class="container dessert-wrap">
+      <div class="mb-8 text-center">
+        <h1 class="h3 mb-2">{{ .Title }}</h1>
+        {{ with .Params.description }}<p class="text-text-light">{{ . }}</p>{{ end }}
+        <p class="mt-2 text-sm text-text-light">{{ len .RegularPages }} posts</p>
+      </div>
+      {{ partial "dessert-grid" .RegularPages.ByDate.Reverse }}
+    </div>
+  </section>
+{{ end }}

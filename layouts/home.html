@@ -1,56 +1,35 @@
 {{ define "main" }}
-  {{ with .Params.banner }}
-    <section class="section pt-20 pb-14">
+  {{ $desserts := first 6 (where site.RegularPages "Section" "dessert") }}
+  {{ with $desserts }}
+    <section class="section-sm pt-16">
       <div class="container">
-        <div class="row justify-center">
-          <div class="lg:col-8 md:col-10 text-center">
-            <h1 class="mb-2 text-h3 lg:text-h1">{{ .title | markdownify }}</h1>
-            {{ with .subtitle }}<p class="mb-6 text-lg italic text-text-light">{{ . }}</p>{{ end }}
-            <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
-            {{ range $i, $b := .buttons }}
-              <a class="btn {{ if eq $i 0 }}btn-primary{{ else }}btn-outline-primary{{ end }} m-1" href="{{ $b.link | relLangURL }}">{{ $b.label }}</a>
-            {{ end }}
-          </div>
+        <div class="mb-6 flex items-baseline justify-between">
+          <h2 class="h4">Dessert</h2>
+          <a class="text-sm text-text-light hover:text-text-dark" href="{{ "dessert/" | relLangURL }}">View all →</a>
         </div>
+        {{ partial "dessert-grid" . }}
       </div>
     </section>
   {{ end }}
 
-  {{ with .Params.interests }}
-    <section class="section-sm">
-      <div class="container">
-        <h2 class="mb-10 text-center">{{ .title }}</h2>
-        <div class="row">
-          {{ range .items }}
-            <div class="md:col-6 lg:col-3 mb-6">
-              <div class="h-full rounded-lg border border-border p-6">
-                <div class="mb-3 text-3xl">{{ .icon }}</div>
-                <h3 class="h5 mb-2">{{ .title }}</h3>
-                <p>{{ .content | markdownify }}</p>
-              </div>
-            </div>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-  {{ end }}
-
-  {{ $posts := first 3 (where site.RegularPages "Section" "blog") }}
+  {{ $posts := first 5 (where site.RegularPages "Section" "blog") }}
   {{ with $posts }}
     <section class="section-sm">
       <div class="container">
-        <h2 class="mb-10 text-center">Latest Posts</h2>
-        <div class="row">
-          {{ range . }}
-            <div class="md:col-6 lg:col-4 mb-6">
-              <a class="block h-full rounded-lg border border-border p-6 hover:border-primary" href="{{ .RelPermalink }}">
-                <p class="mb-2 text-sm text-text-light">{{ .Date.Format "2006-01-02" }}</p>
-                <h3 class="h5 mb-2">{{ .Title }}</h3>
-                <p>{{ .Summary | plainify | truncate 120 }}</p>
-              </a>
-            </div>
-          {{ end }}
+        <div class="mb-6 flex items-baseline justify-between">
+          <h2 class="h4">Blog</h2>
+          <a class="text-sm text-text-light hover:text-text-dark" href="{{ "blog/" | relLangURL }}">View all →</a>
         </div>
+        <ul>
+          {{ range . }}
+            <li class="border-b border-border py-4">
+              <a class="flex items-baseline justify-between gap-4 hover:text-text-dark" href="{{ .RelPermalink }}">
+                <span class="font-semibold text-text-dark">{{ .Title }}</span>
+                <span class="shrink-0 text-sm text-text-light">{{ .Date.Format "2006-01-02" }}</span>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
       </div>
     </section>
   {{ end }}

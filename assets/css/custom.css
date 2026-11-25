@@ -13,3 +13,7 @@ footer {
 footer {
   border-top: 1px solid var(--color-border, #eaeaea);
 }
+
+/* Dessert grid */
+.dessert-wrap { max-width: 935px; }
+.dessert-overlay { background: rgba(0, 0, 0, 0.4); }

@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <section class="section-sm pt-16">
+    <div class="container dessert-wrap">
+      <div class="row">
+        <div class="md:col-7 mb-6">
+          {{ range .Resources.ByType "image" }}
+            {{ if eq .MediaType.SubType "svg" }}
+              <img class="mb-2 w-full" src="{{ .RelPermalink }}" alt="{{ $.Title }}" />
+            {{ else }}
+              {{ $big := .Resize "1200x webp q85" }}
+              <img class="mb-2 w-full" src="{{ $big.RelPermalink }}" width="{{ $big.Width }}" height="{{ $big.Height }}" alt="{{ $.Title }}" />
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="md:col-5">
+          <h1 class="h4 mb-1">{{ .Title }}</h1>
+          <p class="mb-4 text-sm text-text-light">
+            {{ .Date.Format "2006-01-02" }}{{ with .Params.place }} · 📍 {{ . }}{{ end }}
+          </p>
+          <div class="content">{{ .Content }}</div>
+          <div class="mt-8 flex justify-between text-sm">
+            {{ with .NextInSection }}<a class="hover:text-text-dark" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+            {{ with .PrevInSection }}<a class="hover:text-text-dark" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+          </div>
+          <a class="mt-6 inline-block text-sm text-text-light hover:text-text-dark" href="{{ "dessert/" | relLangURL }}">← All desserts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

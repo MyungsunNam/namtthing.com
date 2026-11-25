@@ -1,0 +1,14 @@
+<div class="grid grid-cols-3 gap-1 md:gap-2">
+  {{ range . }}
+    {{ $p := . }}
+    {{ $thumb := partial "dessert-thumb" . }}
+    <a href="{{ .RelPermalink }}" class="group relative block aspect-square overflow-hidden bg-light" aria-label="{{ .Title }}">
+      {{ with $thumb }}
+        <img src="{{ . }}" alt="{{ $p.Title }}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      {{ end }}
+      <div class="absolute inset-0 flex items-center justify-center dessert-overlay p-2 text-center text-sm font-semibold text-white opacity-0 transition group-hover:opacity-100">
+        {{ .Title }}
+      </div>
+    </a>
+  {{ end }}
+</div>

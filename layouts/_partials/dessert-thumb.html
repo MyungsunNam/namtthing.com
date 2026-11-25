@@ -1,0 +1,11 @@
+{{/* Returns the URL of a square thumbnail for a dessert page (first image in its bundle). */}}
+{{ $img := .Resources.GetMatch "{*.jpg,*.jpeg,*.png,*.webp,*.JPG,*.JPEG,*.PNG,*.HEIC,*.svg}" }}
+{{ $url := "" }}
+{{ with $img }}
+  {{ if eq .MediaType.SubType "svg" }}
+    {{ $url = .RelPermalink }}
+  {{ else }}
+    {{ $url = (.Fill "800x800 smart webp q80").RelPermalink }}
+  {{ end }}
+{{ end }}
+{{ return $url }}
